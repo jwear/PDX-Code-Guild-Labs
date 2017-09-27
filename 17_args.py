@@ -15,11 +15,12 @@ Range: 875
 Entries: 17
 
 """
-
+# Returns the number of arguments
 def arb(*args):
     count_args = len(args)
     print('The {} args are: {}'.format(count_args, args))
-    
+
+# Returns the sum, max, min, average, ranges, and total entries of the arguments
 def stats(*args):
     sum_args = sum(args)
     print('Sum: {}'.format(sum_args))
