@@ -10,10 +10,10 @@
 7765
 
 >>> choose_longest("Greg", "Rooney")
-Rooney
+'Rooney'
 
 >>> choose_longest("Greg", "Rooney", "Philip", "Maximus", "Gabrielle")
-Gabrielle
+'Gabrielle'
 
 >>> choose_longest("Greg", [0, 0, 0, 0, 4])
 [0, 0, 0, 0, 4]
@@ -24,15 +24,13 @@ Gabrielle
 def combine(*args, elements=0):
     if len(args) <= 2:
         sum_args = sum(args)
-        print(sum_args)
-    else:
-        print('No sum for number of elements more than 2.')
+        return sum_args
 
 # Return the sum of any number of integers passed using *args.
 def combine_many(*args):
     sum_args = sum(args)
-    print(sum_args)
+    return sum_args
 
 # Return the longest input argument.
 def choose_longest(*args):
-    print(max(args, key=len))
+    return max(args, key=len)
