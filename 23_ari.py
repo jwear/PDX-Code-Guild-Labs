@@ -75,7 +75,8 @@ ari_scale = {
 
 # Function to look up age range and grade level
 def lookup(score):
-    if score in range(15):
+    if score in ari_scale:
+        score = ari_scale[score]
         grade = ari_scale[score]['grade level']
         age = ari_scale[score]['ages']
         return grade, age
