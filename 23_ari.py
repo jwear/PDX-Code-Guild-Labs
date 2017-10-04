@@ -77,7 +77,7 @@ ari_scale = {
 def lookup(score):
     if score in ari_scale:
         score = ari_scale[score]
-        grade = ari_scale[score]['grade level']
+        grade = ari_scale[score]['grade_level']
         age = ari_scale[score]['ages']
         return grade, age
     elif score > 14:
