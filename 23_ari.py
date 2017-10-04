@@ -9,7 +9,7 @@ ari = {  '1' : 'geneology_of_morals.txt',
          '8' : 'the_room_with_the_little_door.txt'
 }
 
-# Prints book directory and prompts user for a selction
+# Prints book directory and prompts user for a selection
 print('To compute its automated readability index, pick from one of the files below:\n')
 for key, value in ari.items():
     print(key + " -", value)
@@ -36,7 +36,7 @@ selected_book = search_dict(selected)
 with open(selected_book, 'r', encoding='utf-8') as file:
     data_file = file.read()
 
-# Function to count number of characters
+# Function to count number of characters, words, and sentences
 def count_all(selected_book):
     sentences = data_file.count('.') + data_file.count('!') + data_file.count('?')
     characters = 0
