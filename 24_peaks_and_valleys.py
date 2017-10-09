@@ -30,6 +30,7 @@
 
 data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
 
+# Function to find peaks
 def peaks(data):
     peak_indices = []
     for index, n in enumerate(data[:-1]):
@@ -39,6 +40,7 @@ def peaks(data):
 
 peak_indices = peaks(data)
 
+# Function to find valleys
 def valleys(data):
     valleys_indices = []
     for index, n in enumerate(data):
@@ -48,6 +50,7 @@ def valleys(data):
 
 valleys_indices = valleys(data)
 
+# Function to find peaks and valleys
 def peaks_and_valleys(data):
     peaks_and_valleys_indices = []
     for index, n in enumerate(data[:-1]):
@@ -57,6 +60,7 @@ def peaks_and_valleys(data):
 
 points_of_interest = peaks_and_valleys(data)
 
+# Function to list each slope
 def chop(data, points_of_interest):
     chopped_list = []
     chopped_list.append(data[0:7])
