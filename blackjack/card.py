@@ -38,7 +38,6 @@ class Deck:
             for rank in ranks:
                 cards_in_deck.append(Card(suit, rank))
                 self.cards_in_deck = cards_in_deck[:]
-        self.shuffle()
 
     def __str__(self):
         return 'Deck: %s' % str(len(self.cards_in_deck))
@@ -47,9 +46,13 @@ class Deck:
         random.shuffle(self.cards_in_deck)
 
     def cut_deck(self):
-        half = len(self.cards_in_deck) / 2
-        return self.cards_in_deck[half:] + self.cards_in_deck[:half]
+        half = len(self.cards_in_deck) // 2
+        self.cards_in_deck[half:half * 2] + self.cards_in_deck[:half]
 
     def draw_card(self):
         card = self.cards_in_deck.pop(0)
         return card
+
+if __name__ == '__main__':
+    deck = Deck()
+    import pdb; pdb.set_trace()
