@@ -1,0 +1,18 @@
+body {
+  background: #222;
+  color: #fff;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+#button {
+  display: inline-block;
+  background-color: #fc999b;
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 2px;
+  padding: 5px 15px;
+}
